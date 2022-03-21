@@ -1,5 +1,4 @@
 import Component from '@ember/component';
-import { assign } from '@ember/polyfills';
 import { set, get, getProperties } from '@ember/object';
 import { isPresent, typeOf } from '@ember/utils';
 
@@ -10,7 +9,7 @@ function deepObjectAssign(object) {
     }
   });
 
-  return assign({}, object);
+  return Object.assign({}, object);
 }
 
 export default Component.extend({
